@@ -21,21 +21,24 @@ class ViewController: UIViewController {
             return
             
         }
+
+        guard let homeVC = self.storyboard?.instantiateViewController(withIdentifier: "TabBarController") else { return }
+          self.navigationController?.pushViewController(homeVC, animated: true)
         
-        guard let confirmVC = self.storyboard?.instantiateViewController(identifier: "ConfirmViewController") as? ConfirmViewController else { return }
-        confirmVC.massage = emailTextField.text
-        confirmVC.modalPresentationStyle = .fullScreen
-        //옵셔널바인딩만 하면 끝!
-        self.present(confirmVC, animated: true, completion: nil)
-        
+//        guard let homeVC = self.storyboard?.instantiateViewController(identifier: "HomeViewController") as? HomeViewController else { return }
+//
+//        homeVC.modalPresentationStyle = .fullScreen
+//        self.present(homeVC, animated: true, completion: nil)
+
     }
     
     @IBAction func signupClicked(_ sender: Any) {
         
-        guard let signupVC = self.storyboard?.instantiateViewController(identifier: "SignUpViewController") as? SignUpViewController else { return }
-        
-        self.navigationController?.pushViewController(signupVC, animated: true)
-        
+        guard let homeVC = self.storyboard?.instantiateViewController(withIdentifier: "TabBarController") else { return }
+          self.navigationController?.pushViewController(homeVC, animated: true)
+//        guard let signupVC = self.storyboard?.instantiateViewController(identifier: "SignUpViewController") as? SignUpViewController else { return }
+//
+//        self.navigationController?.pushViewController(signupVC, animated: true)
         
     }
     

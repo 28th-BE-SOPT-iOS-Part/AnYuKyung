@@ -36,12 +36,12 @@ class SignUpViewController: UIViewController {
             return
             
         }
-        
-        guard let confirmVC = self.storyboard?.instantiateViewController(identifier: "ConfirmViewController") as? ConfirmViewController else { return }
-        
-        confirmVC.massage = emailTextField.text
-        confirmVC.modalPresentationStyle = .fullScreen
-        self.present(confirmVC, animated: true, completion: { self.navigationController?.popViewController(animated: true)} )
+        guard let homeVC = self.storyboard?.instantiateViewController(withIdentifier: "TabBarController") else { return }
+          self.navigationController?.pushViewController(homeVC, animated: true)
+//        guard let homeVC = self.storyboard?.instantiateViewController(identifier: "HomeViewController") as? HomeViewController else { return }
+//
+//        homeVC.modalPresentationStyle = .fullScreen
+//        self.present(homeVC, animated: true, completion: { self.navigationController?.popViewController(animated: true)} )
         
     }
 }
