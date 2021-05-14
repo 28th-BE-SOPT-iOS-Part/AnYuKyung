@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="DhA-R0-Cbn">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="aGs-xe-4h2">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
@@ -221,6 +221,20 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZjM-pG-BuR">
+                                <rect key="frame" x="16" y="632.5" width="382" height="52"/>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="dKk-N8-ID0"/>
+                                </constraints>
+                                <state key="normal" title="로그인 하러가기 ㄱ-">
+                                    <color key="titleColor" systemColor="labelColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="goToLoginClicked:" destination="JDX-1d-F6r" eventType="touchUpInside" id="oxD-VY-STQ"/>
+                                    <action selector="newAccountClicked:" destination="JDX-1d-F6r" eventType="touchUpInside" id="5MX-y6-7up"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Ajo-qa-lT2"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -237,12 +251,15 @@
                             <constraint firstItem="SCu-lu-3il" firstAttribute="leading" secondItem="qq0-d0-ZsN" secondAttribute="leading" constant="16" id="P3s-wK-gkp"/>
                             <constraint firstItem="RSU-cH-KqH" firstAttribute="leading" secondItem="Ajo-qa-lT2" secondAttribute="leading" constant="16" id="RTF-my-Zgd"/>
                             <constraint firstItem="jww-ya-Lfu" firstAttribute="centerX" secondItem="qq0-d0-ZsN" secondAttribute="centerX" id="SSD-xz-oqc"/>
+                            <constraint firstItem="ZjM-pG-BuR" firstAttribute="top" secondItem="YKo-dl-Vyr" secondAttribute="bottom" constant="8" id="Vtr-Dr-ghN"/>
                             <constraint firstItem="EXT-xx-JIu" firstAttribute="top" secondItem="jww-ya-Lfu" secondAttribute="bottom" id="WBF-vL-3kr"/>
                             <constraint firstItem="cxd-Pk-GDt" firstAttribute="leading" secondItem="qq0-d0-ZsN" secondAttribute="leading" constant="16" id="XGP-Sm-Smn"/>
+                            <constraint firstItem="ZjM-pG-BuR" firstAttribute="leading" secondItem="Ajo-qa-lT2" secondAttribute="leading" constant="16" id="ax1-2k-oAJ"/>
                             <constraint firstItem="YKo-dl-Vyr" firstAttribute="top" secondItem="EXT-xx-JIu" secondAttribute="bottom" constant="40" id="bAa-le-yTl"/>
                             <constraint firstAttribute="trailing" secondItem="SCu-lu-3il" secondAttribute="trailing" constant="16" id="bKN-7k-44W"/>
                             <constraint firstItem="jww-ya-Lfu" firstAttribute="leading" secondItem="Ajo-qa-lT2" secondAttribute="leading" constant="16" id="ef5-6p-vP9"/>
                             <constraint firstItem="Ajo-qa-lT2" firstAttribute="trailing" secondItem="RSU-cH-KqH" secondAttribute="trailing" constant="16" id="gLj-Wh-D9m"/>
+                            <constraint firstItem="ZjM-pG-BuR" firstAttribute="centerX" secondItem="qq0-d0-ZsN" secondAttribute="centerX" id="img-kP-DyW"/>
                             <constraint firstItem="qeh-1O-2hW" firstAttribute="leading" secondItem="Ajo-qa-lT2" secondAttribute="leading" constant="16" id="loJ-Ja-rRt"/>
                             <constraint firstAttribute="trailing" secondItem="cxd-Pk-GDt" secondAttribute="trailing" constant="16" id="mRQ-9Y-59B"/>
                             <constraint firstItem="YKo-dl-Vyr" firstAttribute="centerX" secondItem="qq0-d0-ZsN" secondAttribute="centerX" id="mfm-pc-o81"/>
@@ -250,6 +267,7 @@
                             <constraint firstItem="qeh-1O-2hW" firstAttribute="top" secondItem="RSU-cH-KqH" secondAttribute="bottom" constant="15" id="wFj-Vb-K4y"/>
                             <constraint firstAttribute="trailing" secondItem="EXT-xx-JIu" secondAttribute="trailing" constant="16" id="woi-Ah-sU1"/>
                             <constraint firstItem="Ajo-qa-lT2" firstAttribute="trailing" secondItem="jww-ya-Lfu" secondAttribute="trailing" constant="16" id="xfE-k9-bPR"/>
+                            <constraint firstItem="Ajo-qa-lT2" firstAttribute="trailing" secondItem="ZjM-pG-BuR" secondAttribute="trailing" constant="16" id="zFm-J3-TX5"/>
                             <constraint firstItem="RSU-cH-KqH" firstAttribute="centerX" secondItem="qq0-d0-ZsN" secondAttribute="centerX" id="zfy-Ez-jDn"/>
                         </constraints>
                     </view>
